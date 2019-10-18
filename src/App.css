@@ -1,4 +1,11 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -9,10 +16,16 @@
   flex-direction: row;
 }
 
+.app__header {
+  border-bottom: 1px solid black;
+}
+
 .app__sidebar {
+  border-right: 1px solid black;
   flex: 1;
 }
 
 .app__main {
+  border-left: 1px solid black;
   flex: 3;
 }
