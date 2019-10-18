@@ -89,10 +89,10 @@ export default class App extends React.Component {
 					/>
 				))}
 				<Route
-					path='note/:noteId'
+					path='/note/:noteId'
 					render={rprops => {
 						const {noteId} = rprops.match.params;
-						const note = findNote(notes,noteId);
+						const note = findNote(notes, noteId);
 						return <NotePageMain {...rprops} note={note} />
 					}}
 				/>
