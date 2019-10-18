@@ -7,10 +7,10 @@ export default class App extends React.Component {
 		return (
 			<div className="App">
 			  	<header className='app__header'>
-						<Link to='/'><h1>Noteful</h1></Link>
+					<Link to='/'><h1>Noteful</h1></Link>
 				</header>
 				<main className='app__main'>
-
+					
 				</main>
 				<sidebar className='app__sidebar'>
 
