@@ -4,6 +4,17 @@ body {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .App {
   border: 1px solid black;
   display: flex;
@@ -28,4 +39,6 @@ body {
 .app__main {
   border-left: 1px solid black;
   flex: 3;
+  padding: 20px;
+  text-align: left;
 }

@@ -1,0 +1,9 @@
+.NoteListNav__list a {
+	border-bottom: 1px solid black;
+	display: block;
+	padding: 20px;
+}
+
+.NoteListNav__list a.active {
+	background: lightgray;
+}
