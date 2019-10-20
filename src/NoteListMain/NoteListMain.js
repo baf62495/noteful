@@ -1,7 +1,6 @@
 import React from 'react';
 import './NoteListMain.css';
 import Note from '../Note/Note';
-import { Link } from 'react-router-dom';
 import AddNoteButton from '../AddNoteButton/AddNoteButton';
 
 export default function NoteListMain(props) {
