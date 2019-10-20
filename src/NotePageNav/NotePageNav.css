@@ -1,0 +1,14 @@
+.NotePageNav {
+	display: flex;
+	flex-direction: column;
+}
+
+.NotePageNav__back {
+	background: none;
+	border: 1px solid black;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: block;
+	margin: 8px;
+	padding: 20px;
+}
