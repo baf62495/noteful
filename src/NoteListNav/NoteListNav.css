@@ -1,3 +1,7 @@
+.NoteListNav__list {
+	margin-bottom: 16px;
+}
+
 .NoteListNav__list a {
 	border-bottom: 1px solid black;
 	display: block;

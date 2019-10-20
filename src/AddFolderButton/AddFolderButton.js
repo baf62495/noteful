@@ -1,8 +1,13 @@
 import React from 'react';
 import './AddFolderButton.css';
+import { Link } from 'react-router-dom';
 
-export default function AddFolderButton() {
+export default function AddNoteButton() {
 	return (
-		<p>This is the AddFolderButton Component</p>
+		<Link to='/add-folder'>
+			<button className='btn NoteListNav__btn'>
+				Add folder
+			</button>
+		</Link>
 	)
 }

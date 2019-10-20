@@ -2,6 +2,8 @@ import React from 'react';
 import './NoteListNav.css';
 import { NavLink } from 'react-router-dom';
 
+import AddFolderButton from '../AddFolderButton/AddFolderButton';
+
 export default function NoteListNav(props) {
 	return (
 		<div className='NoteListNav'>
@@ -17,6 +19,7 @@ export default function NoteListNav(props) {
 					</li>)
 				}
 			</ul>
+			<AddFolderButton />
 		</div>
 	)
 }
