@@ -60,6 +60,8 @@ export default class App extends React.Component {
 						return <NotePageNav {...rprops} folder={folder} />
 					}}
 				/>
+				<Route path="/add-folder" component={NotePageNav} />
+                <Route path="/add-note" component={NotePageNav} />
 			</>	
 		)
 	}
@@ -96,8 +98,6 @@ export default class App extends React.Component {
 						return <NotePageMain {...rprops} note={note} />
 					}}
 				/>
-				<Route path="/add-folder" component={NotePageNav} />
-                <Route path="/add-note" component={NotePageNav} />
 			</>
 		)
 	}
