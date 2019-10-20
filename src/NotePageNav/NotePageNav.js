@@ -1,8 +1,17 @@
 import React from 'react';
 import './NotePageNav.css';
 
-export default function NotePageNav() {
+export default function NotePageNav(props) {
 	return (
-		<p>This is the NotePageNav Component</p>
+		<div className='NotePageNav'>
+			<button
+				tag='button'
+				role='link'
+				onClick={() => props.history.goBack()}
+				className='NotePageNav__back'
+			>
+				Go back
+			</button>
+		</div>
 	)
 }
