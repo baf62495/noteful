@@ -28,13 +28,3 @@ export default class NoteListNav extends React.Component {
 		)
 	}
 }
-
-
-
-// render={rprops => (
-// 	<NoteListNav
-// 		folders={folders}
-// 		notes={notes}
-// 		{...rprops}
-// 	/>
-// )}
