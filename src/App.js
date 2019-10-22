@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Route, Link } from 'react-router-dom';
-import dummyStore from './dummy-store';
 import ApiContext from './ApiContext';
 import NoteListNav from './NoteListNav/NoteListNav';
 import NotePageMain from './NotePageMain/NotePageMain';
 import NoteListMain from './NoteListMain/NoteListMain';
 import NotePageNav from './NotePageNav/NotePageNav';
+import config from './config';
 
 
 export const findFolder = (folders=[], folderId) =>
@@ -19,9 +19,33 @@ export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			folders: dummyStore.folders,
-			notes: dummyStore.notes
+			folders: [],
+			notes: []
 		}
+	}
+
+	componentDidMount() {
+		Promise.all([
+			fetch(`${config.API_ENDPOINT}/notes`),
+			fetch(`${config.API_ENDPOINT}/folders`)
+		])
+			.then(([notesRes, foldersRes]) => {
+				if (!notesRes.ok)
+					return notesRes.json().then(e => Promise.reject(e))
+				if (!foldersRes.ok)
+					return foldersRes.json().then(e => Promise.reject(e))
+
+				return Promise.all([
+					notesRes.json(),
+					foldersRes.json()
+				])
+			})
+			.then(([notes, folders]) => {
+				this.setState({ notes, folders })
+			})
+			.catch(error => {
+				console.error({ error })
+			})
 	}
 
 	handleAddNote = note => {
