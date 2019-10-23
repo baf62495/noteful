@@ -62,7 +62,7 @@ export default class App extends React.Component {
 
 	handleDeleteNote = noteId => {
 		this.setState({
-			notes: this.state.note.filter(note => note.id !== noteId)
+			notes: this.state.notes.filter(note => note.id !== noteId)
 		})
 	}
 
