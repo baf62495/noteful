@@ -6,6 +6,8 @@ import NoteListNav from './NoteListNav/NoteListNav';
 import NotePageMain from './NotePageMain/NotePageMain';
 import NoteListMain from './NoteListMain/NoteListMain';
 import NotePageNav from './NotePageNav/NotePageNav';
+import AddNote from './AddNote/AddNote';
+import AddFolder from './AddFolder/AddFolder';
 import config from './config';
 
 
@@ -101,6 +103,14 @@ export default class App extends React.Component {
 				<Route
 					path='/note/:noteId'
 					component={NotePageMain}
+				/>
+				<Route
+					path='/add-note'
+					component={AddNote}
+				/>
+				<Route
+					path='/add-folder'
+					component={AddFolder}
 				/>
 			</>
 		)

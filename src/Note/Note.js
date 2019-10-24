@@ -49,7 +49,7 @@ export default class Note extends React.Component {
 				<div className='Note__modified'>
 					Last modified on {' '}
 					<span className='date'>
-						{format(new Date(modified), 'dd/MM/yyyy')}
+						{modified}
 					</span>
 				</div>
 				<button
