@@ -64,6 +64,7 @@ export default class AddNote extends React.Component {
 							id='note-name-input'
 							name='note-name'
 							ref={this.nameInput}
+							required
 						/>
 					</div>
 					<div className='note__form-field'>

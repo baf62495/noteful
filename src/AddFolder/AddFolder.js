@@ -60,6 +60,7 @@ export default class AddFolder extends React.Component {
 							id='folder-name-input'
 							name='folder-name'
 							ref={this.folderName}
+							required
 						/>
 					</div>
 					<button type='submit' className='btn AddFolder__btn'>
