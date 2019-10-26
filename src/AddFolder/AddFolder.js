@@ -2,6 +2,7 @@ import React from 'react';
 import './AddFolder.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
+import PropTypes from 'prop-types';
 
 export default class AddFolder extends React.Component {
 	constructor(props) {
@@ -70,4 +71,8 @@ export default class AddFolder extends React.Component {
 			</section>
 		)
 	}
+}
+
+AddFolder.propType = {
+	push: PropTypes.func.isRequired
 }

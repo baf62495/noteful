@@ -1,5 +1,6 @@
 import React from 'react';
 import './NotePageNav.css';
+import PropTypes from 'prop-types';
 
 
 export default class NotePageNav extends React.Component {
@@ -26,4 +27,8 @@ export default class NotePageNav extends React.Component {
 			</div>
 		)
 	}
+}
+
+NotePageNav.propType = {
+	push: PropTypes.func.isRequired
 }

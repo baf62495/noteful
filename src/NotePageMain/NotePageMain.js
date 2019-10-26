@@ -2,6 +2,7 @@ import React from 'react';
 import './NotePageMain.css';
 import Note from '../Note/Note';
 import ApiContext from '../ApiContext';
+import PropTypes from 'prop-types';
 
 export default class NotePageMain extends React.Component {
 	static defaultProps = {
@@ -40,4 +41,9 @@ export default class NotePageMain extends React.Component {
 			</section>
 		)
 	}
+}
+
+NotePageMain.propType = {
+	push: PropTypes.func.isRequired,
+	params: PropTypes.array.isRequired
 }

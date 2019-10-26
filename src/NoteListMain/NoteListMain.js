@@ -3,6 +3,7 @@ import './NoteListMain.css';
 import Note from '../Note/Note';
 import AddNoteButton from '../AddNoteButton/AddNoteButton';
 import ApiContext from '../ApiContext';
+import PropTypes from 'prop-types';
 
 export default class NoteListMain extends React.Component {
 	static defaultProps = {
@@ -43,4 +44,8 @@ export default class NoteListMain extends React.Component {
 			</section>
 		)
 	}
+}
+
+NoteListMain.propType = {
+	math: PropTypes.object.isRequired
 }

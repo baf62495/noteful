@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class ComponentError extends React.Component {
 	constructor(props) {
@@ -20,4 +21,8 @@ export default class ComponentError extends React.Component {
 		}
 		return this.props.children;
 	}
+}
+
+ComponentError.propType = {
+	hasError: PropTypes.bool
 }
