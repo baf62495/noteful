@@ -9,6 +9,7 @@ import NotePageNav from './NotePageNav/NotePageNav';
 import AddNote from './AddNote/AddNote';
 import AddFolder from './AddFolder/AddFolder';
 import config from './config';
+import ComponentError from './ComponentError';
 
 
 export const findFolder = (folders=[], folderId) =>
@@ -132,10 +133,14 @@ export default class App extends React.Component {
 					</header>
 					<div className="wrapper">
 						<aside className='app__sidebar'>
-							{this.renderNavRoutes()}
+							<ComponentError>
+								{this.renderNavRoutes()}
+							</ComponentError>
 						</aside>
 						<main className='app__main'>
-							{this.renderMainRoutes()}
+							<ComponentError>
+								{this.renderMainRoutes()}
+							</ComponentError>
 						</main>
 					</div>
 				</div>
