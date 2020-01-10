@@ -22,9 +22,9 @@ export default class AddNote extends React.Component {
 		e.preventDefault();
 
 		const newNote = {
-			name: this.nameInput.current.value,
+			note_name: this.nameInput.current.value,
 			content: this.contentInput.current.value,
-			folderId: this.folderSelect.current.value,
+			folder_id: this.folderSelect.current.value,
 			modified: new Date()
 		}
 
@@ -43,7 +43,7 @@ export default class AddNote extends React.Component {
 			})
 			.then(note => {
 				this.context.addNote(note)
-				this.props.history.push(`/folder/${note.folderId}`)
+				this.props.history.push(`/folder/${note.folder_id}`)
 			})
 			.catch(err => {
 				console.error({ err })
@@ -86,7 +86,7 @@ export default class AddNote extends React.Component {
 								<option value={null}>Choose a folder</option>
 								{folders.map(folder =>
 									<option key={folder.id} value={folder.id}>
-										{folder.name}
+										{folder.folder_name}
 									</option>
 								)}
 							</select>

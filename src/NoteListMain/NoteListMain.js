@@ -17,7 +17,7 @@ export default class NoteListMain extends React.Component {
 	getNotesForFolder = (notes=[], folderId) => (
 		(!folderId)
 			? notes
-			: notes.filter(note => note.folderId === folderId)
+			: notes.filter(note => note.folder_id == folderId)
 	)
 
 	render() {
@@ -34,7 +34,7 @@ export default class NoteListMain extends React.Component {
 						<li key={note.id}>
 							<Note
 								id={note.id}
-								name={note.name}
+								name={note.note_name}
 								modified={note.modified}
 							/>
 						</li>

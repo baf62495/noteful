@@ -22,7 +22,7 @@ export default class AddFolder extends React.Component {
 		e.preventDefault();
 
 		const newFolder = {
-			name: this.folderName.current.value
+			folder_name: this.folderName.current.value
 		}
 
 		fetch(`${config.API_ENDPOINT}/folders`, {

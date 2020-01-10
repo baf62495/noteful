@@ -24,8 +24,9 @@ export default class Note extends React.Component {
 			},
 		})
 			.then(res => {
-				if (!res.ok)
-					return res.json().the(e => Promise.reject(e))
+				if (!res.ok) {
+					return res.json().then(e => Promise.reject(e))
+				}
 				return res.json()
 			})
 			.then(() => {
@@ -66,6 +67,6 @@ export default class Note extends React.Component {
 Note.propTypes = {
 	onDeleteNote: PropTypes.func.isRequired,
 	name: PropTypes.string.isRequired,
-	id: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
 	modified: PropTypes.string
 }
